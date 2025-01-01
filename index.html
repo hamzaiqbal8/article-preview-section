@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="article-section">
+      <div class="article-section-wrapper">
+        <div class="left-side-article">
+          <div class="article-image-wrapper">
+            <img src="./images/drawers.jpg" alt="" />
+          </div>
+        </div>
+        <div class="right-side-article">
+          <h2>
+            Practice your layout skills with this article preview component
+            around with animations for the sharing icons as well.
+          </h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+            aspernatur aperiam. Vel sunt voluptatibus inventore necessitatibus
+            repellat dolorum ab! Fuga velit fugiat aspernatur nostrum animi
+            perferendis.
+          </p>
+          <footer>
+            <div class="profile-info">
+              <div class="profile-image-wrapper">
+                <img src="images/avatar-michelle.jpg" alt="" />
+                <div class="user-info">
+                  <span>Hamza Iqbal</span>
+                  <p>28 Dec 2024</p>
+                </div>
+              </div>
+              <div class="icon-section">
+                <img src="images/icon-share.svg" alt="" class="" />
+                <div class="hover-icons">
+                  <p>Share</p>
+                  <img src="./images/icon-facebook.svg" alt="" />
+                  <img src="./images/icon-twitter.svg" alt="" />
+                  <img src="./images/icon-pinterest.svg" alt="" />
+                </div>
+              </div>
+              <div class="arrow-section">
+                <img src="./images/icon-share.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="icons-section-web remove">
+           <div class="icon-web">
+              <p>Share</p>
+              <img src="./images/icon-facebook.svg" alt="" />
+              <img src="./images/icon-twitter.svg" alt="" />
+              <img src="./images/icon-pinterest.svg" alt="" />
+            </div>
+            <div class="arrow-section">
+              <img src="./images/icon-share.svg" alt="" />
+            </div>
+          </div>
+           
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let ShareBtn = document.querySelector(".icon-section");
+      let IconsBtn = document.querySelector(".hover-icons");
+      let arrowIcon = document.querySelector(".arrow-section");
+      let profileInfo = document.querySelector(".profile-info");
+      let webIcons = document.querySelector(".icons-section-web")
+
+      ShareBtn.addEventListener("click", () => {
+        IconsBtn.classList.toggle("remove");
+      });
+      arrowIcon.addEventListener("click", () => {
+        profileInfo.classList.toggle("remove");
+        webIcons.classList.remove("remove")
+      });
+    </script>
+  </body>
+</html>
